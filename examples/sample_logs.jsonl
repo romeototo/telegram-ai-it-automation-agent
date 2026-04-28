@@ -1,0 +1,11 @@
+{"timestamp": "2026-04-28T15:00:00Z", "event_type": "SYSTEM_STARTUP", "data": {"message": "Initializing Telegram AI IT Automation Agent"}}
+{"timestamp": "2026-04-28T15:01:10Z", "event_type": "COMMAND_START", "data": {"user": "admin_romeo"}}
+{"timestamp": "2026-04-28T15:02:15Z", "event_type": "WORKER_RECEIVED_REQUEST", "data": {"request": "check disk usage"}}
+{"timestamp": "2026-04-28T15:02:15Z", "event_type": "PLANNING_STARTED", "data": {"user_intent": "check disk usage"}}
+{"timestamp": "2026-04-28T15:02:16Z", "event_type": "PLANNING_COMPLETED", "data": {"plan": ["systeminfo"]}}
+{"timestamp": "2026-04-28T15:02:16Z", "event_type": "EXECUTION_REQUESTED", "data": {"command": "systeminfo", "dry_run": true}}
+{"timestamp": "2026-04-28T15:02:16Z", "event_type": "EXECUTION_DRY_RUN", "data": {"command": "systeminfo"}}
+{"timestamp": "2026-04-28T15:02:16Z", "event_type": "WORKER_COMPLETED", "data": {"final_output_length": 65}}
+{"timestamp": "2026-04-28T15:05:00Z", "event_type": "TOGGLE_DRY_RUN", "data": {"new_status": false}}
+{"timestamp": "2026-04-28T15:06:00Z", "event_type": "EXECUTION_REQUESTED", "data": {"command": "rm -rf /", "dry_run": false}}
+{"timestamp": "2026-04-28T15:06:00Z", "event_type": "EXECUTION_BLOCKED", "data": {"command": "rm -rf /", "reason": "Not in allowlist or contains denylisted keywords."}}
