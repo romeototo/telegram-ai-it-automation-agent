@@ -11,7 +11,7 @@
 [![Gemini AI](https://img.shields.io/badge/Google_Gemini-8E75B2?style=for-the-badge&logo=googlebard&logoColor=white)](https://ai.google.dev/)
 [![Security: Strict](https://img.shields.io/badge/Security-Strict_Allowlist-success?style=for-the-badge)](#-safety-engine)
 
-*A Proof-of-Work project demonstrating secure, AI-driven IT operations via conversational interfaces.*
+_A Proof-of-Work project demonstrating secure, AI-driven IT operations via conversational interfaces._
 
 </div>
 
@@ -27,7 +27,7 @@ Built with security as the primary focus, it features a robust **Safety Engine**
 
 ## 🌟 Key Features
 
-- **🧠 AI Planner (Agentic Workflow):** Leverages LLMs to understand natural language requests (e.g., *"Check why the server is slow"*) and translates them into a sequence of safe operational commands.
+- **🧠 AI Planner (Agentic Workflow):** Leverages LLMs to understand natural language requests (e.g., _"Check why the server is slow"_) and translates them into a sequence of safe operational commands.
 - **🛡️ Strict Safety Engine:** Employs rigorous `Allowlist` and `Denylist` architectures. Destructive commands (like `rm`, `format`, `sudo`) are actively intercepted and blocked.
 - **🚦 Dry-Run by Default:** Safety is paramount. Commands are simulated and returned to the user for approval before any actual system execution occurs.
 - **📊 Complete Audit Trail:** Every user request, AI-generated plan, and command execution is securely logged in `JSONL` format for compliance and monitoring.
@@ -51,13 +51,13 @@ graph TD
     B -- "Natural Language" --> C{Gemini AI Planner}:::ai
     C -- "Generates Action Plan" --> D[Task Queue]
     D -- "Proposes Command" --> E{Safety Engine}:::security
-    
+
     E -- "DENIED (Blacklisted)" --> F[Reject & Log]:::security
     E -- "APPROVED (Whitelisted)" --> G{Dry-Run Mode?}
-    
+
     G -- "ON" --> H[Simulate Output & Ask User]
     G -- "OFF" --> I[Execute via Subprocess]:::system
-    
+
     I -- "Result" --> J[(JSONL Audit Log)]
     I -- "Format Response" --> B
 ```
@@ -67,6 +67,7 @@ graph TD
 ## 🚀 Getting Started
 
 ### 1. Prerequisites
+
 - Python 3.10 or higher
 - A Telegram Bot Token (from [@BotFather](https://t.me/BotFather))
 - Google Gemini API Key
@@ -74,6 +75,7 @@ graph TD
 ### 2. Installation
 
 Clone the repository and install dependencies:
+
 ```bash
 git clone https://github.com/romeototo/telegram-ai-it-automation-agent.git
 cd telegram-ai-it-automation-agent
@@ -83,10 +85,13 @@ pip install -r requirements.txt
 ### 3. Configuration
 
 Duplicate the example environment file and configure your credentials:
+
 ```bash
 cp .env.example .env
 ```
+
 Edit `.env` to include your specific tokens:
+
 ```env
 TELEGRAM_BOT_TOKEN=your_telegram_token
 GEMINI_API_KEY=your_gemini_api_key
@@ -96,11 +101,13 @@ GEMINI_API_KEY=your_gemini_api_key
 
 **For Windows Users:**
 Simply double-click the included batch file:
+
 ```cmd
 run_bot.bat
 ```
 
 **For Linux/macOS:**
+
 ```bash
 python src/main.py
 ```
@@ -111,24 +118,25 @@ python src/main.py
 
 Interact with the bot on Telegram using the following slash commands:
 
-| Command | Description | Risk Level |
-|---------|-------------|------------|
-| `/start` | Initialize the bot session | 🟢 Low |
-| `/status` | Check system and agent status | 🟢 Low |
-| `/check_disk` | Safely query storage metrics | 🟢 Low |
-| `/check_memory` | Safely query RAM utilization | 🟢 Low |
-| `/analyze_log` | Use AI to summarize error logs | 🟡 Medium |
-| `/dry_run` | Toggle safe simulation mode (Default: ON) | 🔴 System |
+| Command         | Description                               | Risk Level |
+| --------------- | ----------------------------------------- | ---------- |
+| `/start`        | Initialize the bot session                | 🟢 Low     |
+| `/status`       | Check system and agent status             | 🟢 Low     |
+| `/check_disk`   | Safely query storage metrics              | 🟢 Low     |
+| `/check_memory` | Safely query RAM utilization              | 🟢 Low     |
+| `/analyze_log`  | Use AI to summarize error logs            | 🟡 Medium  |
+| `/dry_run`      | Toggle safe simulation mode (Default: ON) | 🔴 System  |
 
 ---
 
 ## 🔒 Security Policy
 
-This system is built as a Proof-of-Work. The `src/safety.py` module acts as an immutable barrier between the AI Planner and your host OS. 
+This system is built as a Proof-of-Work. The `src/safety.py` module acts as an immutable barrier between the AI Planner and your host OS.
+
 - **No Hardcoded Secrets:** All tokens must be managed via `.env`.
 - **Command Sanitization:** The bot cannot execute chained commands (`&&`, `|`, `;`) to prevent injection attacks.
 
-*For detailed security implementations, please refer to the `docs/` folder.*
+_For detailed security implementations, please refer to the `docs/` folder._
 
 ---
 
