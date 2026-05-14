@@ -17,6 +17,19 @@ _A Proof-of-Work project demonstrating secure, AI-driven IT operations via conve
 
 ---
 
+## Project Snapshot
+
+| Item | Details |
+| ---- | ------- |
+| **Role** | Telegram-based AI agent for safer IT operations workflows |
+| **Live demo** | Source-first project; no public bot token or production endpoint is exposed |
+| **Stack** | Python, Telegram Bot API, Gemini API, JSONL audit logs |
+| **Impact** | Dry-run by default, allowlist/denylist guardrails, auditable command planning |
+| **Status** | Active AI automation proof-of-work |
+| **Portfolio reference** | [romeototo portfolio](https://romeototo.github.io/portfolio-website/#projects) |
+
+---
+
 ## 📖 Overview
 
 The **Telegram AI IT Automation Agent** is an advanced workflow automation prototype designed for IT Support environments. By integrating **Google Gemini AI** with the **Telegram API**, this system interprets complex human intents, breaks them down into actionable steps, and executes them safely using a highly controlled local worker node.
