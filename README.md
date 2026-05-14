@@ -6,10 +6,15 @@
 
 <i>👉 <a href="README-th.md">🇹🇭 อ่านรายละเอียดภาษาไทย</a></i><br><br>
 
-[![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://python.org)
-[![Telegram API](https://img.shields.io/badge/Telegram_API-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white)](https://core.telegram.org/bots/api)
-[![Gemini AI](https://img.shields.io/badge/Google_Gemini-8E75B2?style=for-the-badge&logo=googlebard&logoColor=white)](https://ai.google.dev/)
-[![Security: Strict](https://img.shields.io/badge/Security-Strict_Allowlist-success?style=for-the-badge)](#-safety-engine)
+<p>
+  <a href="https://github.com/romeototo/telegram-ai-it-automation-agent/releases"><img src="https://img.shields.io/github/v/release/romeototo/telegram-ai-it-automation-agent?style=for-the-badge" alt="Release" /></a>
+  <a href="https://github.com/romeototo/telegram-ai-it-automation-agent/actions"><img src="https://img.shields.io/github/actions/workflow/status/romeototo/telegram-ai-it-automation-agent/python-lint.yml?style=for-the-badge&label=Code_Quality" alt="Code Quality" /></a>
+  <a href="https://python.org"><img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python" /></a>
+  <a href="https://core.telegram.org/bots/api"><img src="https://img.shields.io/badge/Telegram_API-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white" alt="Telegram API" /></a>
+  <a href="https://ai.google.dev/"><img src="https://img.shields.io/badge/Google_Gemini-8E75B2?style=for-the-badge&logo=googlebard&logoColor=white" alt="Gemini AI" /></a>
+  <a href="#-safety-engine"><img src="https://img.shields.io/badge/Security-Strict_Allowlist-success?style=for-the-badge" alt="Security: Strict" /></a>
+  <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-22c55e?style=for-the-badge" alt="License" /></a>
+</p>
 
 _A Proof-of-Work project demonstrating secure, AI-driven IT operations via conversational interfaces._
 
