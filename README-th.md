@@ -17,6 +17,19 @@ _โปรเจกต์สาธิตการทำงาน (Proof-of-Work)
 
 ---
 
+## Project Snapshot
+
+| รายการ | รายละเอียด |
+| ------ | ----------- |
+| **บทบาท** | Telegram-based AI agent สำหรับ workflow งาน IT ที่ปลอดภัยขึ้น |
+| **Live demo** | Source-first project; ไม่เปิด bot token หรือ production endpoint สาธารณะ |
+| **Stack** | Python, Telegram Bot API, Gemini API, JSONL audit logs |
+| **Impact** | dry-run by default, allowlist/denylist guardrails, auditable command planning |
+| **สถานะ** | Active AI automation proof-of-work |
+| **Portfolio reference** | [romeototo portfolio](https://romeototo.github.io/portfolio-website/#projects) |
+
+---
+
 ## 📖 ภาพรวม
 
 **Telegram AI IT Automation Agent** คือต้นแบบระบบอัตโนมัติขั้นสูงที่ออกแบบมาสำหรับสภาพแวดล้อม IT Support โดยการรวม **Google Gemini AI** เข้ากับ **Telegram API** ระบบนี้จะตีความความต้องการของมนุษย์ที่ซับซ้อน ย่อยออกมาเป็นขั้นตอนที่ทำได้จริง และรันคำสั่งเหล่านั้นอย่างปลอดภัยผ่านโหนดทำงานภายในที่ควบคุมอย่างเข้มงวด
