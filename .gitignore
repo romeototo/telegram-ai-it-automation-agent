@@ -1,8 +1,9 @@
 # Security
 .env
 
-# Logs
+# Logs & Data
 logs/
+data/
 *.log
 
 # Python
@@ -15,3 +16,11 @@ __pycache__/
 venv/
 env/
 .venv/
+
+# Docker
+.docker/
+
+# IDE
+.vscode/
+.idea/
+*.swp

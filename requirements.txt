@@ -1,4 +1,11 @@
+# Core
 python-telegram-bot>=20.0
-openai>=1.0.0
 python-dotenv>=1.0.0
 pydantic>=2.0.0
+
+# AI / LLM (optional — falls back to rule-based if not installed)
+google-genai>=1.0.0
+
+# Testing (dev only)
+# pytest>=8.0
+# pytest-cov>=5.0

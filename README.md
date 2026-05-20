@@ -14,6 +14,8 @@
   <a href="https://ai.google.dev/"><img src="https://img.shields.io/badge/Google_Gemini-8E75B2?style=for-the-badge&logo=googlebard&logoColor=white" alt="Gemini AI" /></a>
   <a href="#-safety-engine"><img src="https://img.shields.io/badge/Security-Strict_Allowlist-success?style=for-the-badge" alt="Security: Strict" /></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-22c55e?style=for-the-badge" alt="License" /></a>
+  <a href="https://github.com/romeototo/telegram-ai-it-automation-agent/actions/workflows/test.yml"><img src="https://img.shields.io/github/actions/workflow/status/romeototo/telegram-ai-it-automation-agent/test.yml?style=for-the-badge&label=Tests" alt="Tests" /></a>
+  <a href="#-docker-deployment"><img src="https://img.shields.io/badge/Docker-Ready-2496ED?style=for-the-badge&logo=docker&logoColor=white" alt="Docker" /></a>
 </p>
 
 _A Proof-of-Work project demonstrating secure, AI-driven IT operations via conversational interfaces._
@@ -28,7 +30,7 @@ _A Proof-of-Work project demonstrating secure, AI-driven IT operations via conve
 | ---- | ------- |
 | **Role** | Telegram-based AI agent for safer IT operations workflows |
 | **Live demo** | Source-first project; no public bot token or production endpoint is exposed |
-| **Stack** | Python, Telegram Bot API, Gemini API, JSONL audit logs |
+| **Stack** | Python 3.11, Telegram Bot API, Google Gemini Flash, SQLite + JSONL audit logs, Docker |
 | **Impact** | Dry-run by default, allowlist/denylist guardrails, auditable command planning |
 | **Status** | Active AI automation proof-of-work |
 | **Portfolio reference** | [romeototo portfolio](https://romeototo.github.io/portfolio-website/#projects) |
@@ -50,6 +52,11 @@ Built with security as the primary focus, it features a robust **Safety Engine**
 - **🚦 Dry-Run by Default:** Safety is paramount. Commands are simulated and returned to the user for approval before any actual system execution occurs.
 - **📊 Complete Audit Trail:** Every user request, AI-generated plan, and command execution is securely logged in `JSONL` format for compliance and monitoring.
 - **📱 Native Telegram Interface:** Control and monitor your IT infrastructure directly from your smartphone with seamless Telegram integration.
+- **🔐 User Authorization:** Telegram user ID whitelist ensures only authorized operators can issue commands.
+- **📊 System Health Reports:** Consolidated `/report` command provides CPU, Memory, Disk, and Network status in one view.
+- **⏰ Proactive Monitoring:** Scheduled health checks automatically alert admins when system resources reach critical thresholds.
+- **💬 Natural Language Interface:** Beyond slash commands, operators can type natural language requests like "check disk space" directly.
+- **🐳 Docker Ready:** One-command deployment with `docker-compose up -d` for instant setup.
 
 ---
 
@@ -113,6 +120,8 @@ Edit `.env` to include your specific tokens:
 ```env
 TELEGRAM_BOT_TOKEN=your_telegram_token
 GEMINI_API_KEY=your_gemini_api_key
+ALLOWED_USER_IDS=123456789,987654321
+ADMIN_CHAT_ID=123456789
 ```
 
 ### 4. Running the Agent
@@ -136,14 +145,44 @@ python src/main.py
 
 Interact with the bot on Telegram using the following slash commands:
 
-| Command         | Description                               | Risk Level |
-| --------------- | ----------------------------------------- | ---------- |
-| `/start`        | Initialize the bot session                | 🟢 Low     |
-| `/status`       | Check system and agent status             | 🟢 Low     |
-| `/check_disk`   | Safely query storage metrics              | 🟢 Low     |
-| `/check_memory` | Safely query RAM utilization              | 🟢 Low     |
-| `/analyze_log`  | Use AI to summarize error logs            | 🟡 Medium  |
-| `/dry_run`      | Toggle safe simulation mode (Default: ON) | 🔴 System  |
+| Command         | Description                                    | Risk Level |
+| --------------- | ---------------------------------------------- | ---------- |
+| `/start`        | Initialize the bot session                     | 🟢 Low     |
+| `/help`         | Show available commands                        | 🟢 Low     |
+| `/status`       | Check system and agent status                  | 🟢 Low     |
+| `/check_disk`   | Safely query storage metrics                   | 🟢 Low     |
+| `/check_memory` | Safely query RAM utilization                   | 🟢 Low     |
+| `/check_cpu`    | Check CPU utilization                          | 🟢 Low     |
+| `/check_network`| Check network configuration                    | 🟢 Low     |
+| `/report`       | Full system health report (CPU+RAM+Disk+Net)   | 🟢 Low     |
+| `/analyze_log`  | AI-powered log analysis and summarization      | 🟡 Medium  |
+| `/make_sop`     | Generate Standard Operating Procedures         | 🟡 Medium  |
+| `/history`      | View recent command execution history          | 🟢 Low     |
+| `/dry_run`      | Toggle safe simulation mode (Default: ON)      | 🔴 System  |
+
+---
+
+## 🐳 Docker Deployment
+
+The fastest way to deploy the agent:
+
+```bash
+# Build and run with Docker Compose
+docker-compose up -d
+
+# View logs
+docker-compose logs -f
+
+# Stop
+docker-compose down
+```
+
+Or build manually:
+
+```bash
+docker build -t telegram-it-agent .
+docker run -d --env-file .env telegram-it-agent
+```
 
 ---
 
