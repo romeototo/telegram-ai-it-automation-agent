@@ -1,10 +1,15 @@
 <div align="center">
 
-# 🤖 ตัวแทนอัตโนมัติ IT ผ่าน AI บน Telegram (Telegram AI IT Automation Agent)
+![Hero Banner](docs/assets/hero_banner.png)
 
-**บอทอัตโนมัติ AI ระดับองค์กรพร้อมระบบรักษาความปลอดภัยในตัว**
+# 🤖 Telegram AI IT Automation Agent
+
+**บอทอัตโนมัติสำหรับการจัดการ IT ระดับองค์กร พร้อมระบบรักษาความปลอดภัยในตัว**
 
 <i>👉 <a href="README.md">🇬🇧 Read in English</a></i><br><br>
+
+> *พื้นที่สำหรับภาพ GIF สาธิตการทำงาน*<br>
+> ![Demo](https://via.placeholder.com/800x400.png?text=Bot+In+Action+GIF)
 
 <p>
   <a href="https://github.com/romeototo/telegram-ai-it-automation-agent/releases"><img src="https://img.shields.io/github/v/release/romeototo/telegram-ai-it-automation-agent?style=for-the-badge" alt="Release" /></a>

@@ -1,10 +1,15 @@
 <div align="center">
 
+![Hero Banner](docs/assets/hero_banner.png)
+
 # 🤖 Telegram AI IT Automation Agent
 
 **Enterprise-Grade AI Automation Bot with Built-in Safety Guardrails**
 
 <i>👉 <a href="README-th.md">🇹🇭 อ่านรายละเอียดภาษาไทย</a></i><br><br>
+
+> *Demo GIF will be placed here*<br>
+> ![Demo](https://via.placeholder.com/800x400.png?text=Bot+In+Action+GIF)
 
 <p>
   <a href="https://github.com/romeototo/telegram-ai-it-automation-agent/releases"><img src="https://img.shields.io/github/v/release/romeototo/telegram-ai-it-automation-agent?style=for-the-badge" alt="Release" /></a>
