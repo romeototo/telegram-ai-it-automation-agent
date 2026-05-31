@@ -4,12 +4,11 @@
 
 # 🤖 Telegram AI IT Automation Agent
 
-**บอทอัตโนมัติสำหรับการจัดการ IT ระดับองค์กร พร้อมระบบรักษาความปลอดภัยในตัว**
+**บอทช่วยงาน IT automation ผ่าน Telegram พร้อมระบบ safety guardrails, dry-run และ workflow ที่ตรวจสอบย้อนหลังได้**
 
 <i>👉 <a href="README.md">🇬🇧 Read in English</a></i><br><br>
 
-> *พื้นที่สำหรับภาพ GIF สาธิตการทำงาน*<br>
-> ![Demo](https://via.placeholder.com/800x400.png?text=Bot+In+Action+GIF)
+> repo นี้อธิบาย architecture, command safety model และ workflow สำหรับพัฒนาในเครื่อง ควรเพิ่ม demo จริงหลังจากลบข้อมูล hostname, chat และข้อมูลปฏิบัติการที่อ่อนไหวแล้วเท่านั้น
 
 <p>
   <a href="https://github.com/romeototo/telegram-ai-it-automation-agent/releases"><img src="https://img.shields.io/github/v/release/romeototo/telegram-ai-it-automation-agent?style=for-the-badge" alt="Release" /></a>
